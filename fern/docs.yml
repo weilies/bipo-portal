@@ -26,6 +26,8 @@ navigation:
       - HRMS V1:
           summary: docs/pages/hrms-v1-overview.mdx
           contents:
+            - hrmsV1.authorization:
+                summary: docs/pages/authorization-overview.mdx
             - hrmsV1.hrmsV1Attendance:
                 title: Attendance
                 contents:
@@ -45,8 +47,6 @@ navigation:
                             title: Attendance
                         - hrmsV1.hrmsV1Attendance.hrmsV1HrmsV1AttendanceReference.hrmsV1HrmsV1AttendanceHrmsV1HrmsV1AttendanceReferenceClock:
                             title: Clock
-            - hrmsV1.authorization:
-                summary: docs/pages/authorization-overview.mdx
             - hrmsV1.hrmsV1Claim:
                 title: Claim
             - hrmsV1.hrmsV1Leave:
@@ -126,6 +126,8 @@ navigation:
       - HRMS V2:
           summary: docs/pages/hrms-v2-overview.mdx
           contents:
+            - hrmsV2.authentication:
+                summary: docs/pages/authentication-overview.mdx
             - hrmsV2.hrmsV2Attendance:
                 title: Attendance
                 contents:
@@ -146,8 +148,6 @@ navigation:
                         - hrmsV2.hrmsV2Attendance.hrmsV2HrmsV2AttendanceReference.hrmsV2HrmsV2AttendanceHrmsV2HrmsV2AttendanceReferenceClock:
                             title: Clock
                         - hrmsV2.hrmsV2Attendance.hrmsV2HrmsV2AttendanceReference.spareTimesheet: {}
-            - hrmsV2.authentication:
-                summary: docs/pages/authentication-overview.mdx
             - hrmsV2.hrmsV2Claim:
                 title: Claim
             - hrmsV2.errorHandling:

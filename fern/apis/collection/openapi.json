@@ -134601,9 +134601,11 @@
   "servers": [
     {
       "url": "https://{baseurl}",
+      "description": "Your BIPO HRMS base URL. The default is a sample; replace it with your own tenant's base URL.",
       "variables": {
         "baseurl": {
-          "default": ""
+          "default": "shde999.bipocloud.com/abc",
+          "description": "Host and path of your BIPO HRMS tenant, without the https:// prefix (for example shde999.bipocloud.com/abc)."
         }
       }
     }

@@ -2,6 +2,7 @@
 
 instances:
   - url: bipo.docs.buildwithfern.com
+    custom-domain: developer.biposervice.com
 title: BIPO | Documentation
 layout:
   searchbar-placement: header

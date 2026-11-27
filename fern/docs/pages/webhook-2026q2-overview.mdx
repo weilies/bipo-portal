@@ -1,0 +1,48 @@
+---
+title: Overview
+---
+
+Webhook currently is under BETA. Employee movements can be synchronize to external application in realtime via webhook.
+
+<img src="https://content.pstmn.io/c0f5262c-863b-47c5-b3f1-1647cbc70917/aW1hZ2UucG5n" alt="Developer/Subscriber%20receive%20changed%20field(s)%20together%20with%20key%20field(s)%20to%20easily%20sync%20back%20to%20external%20application" width="434" height="264" />
+
+Example:
+
+<img src="https://content.pstmn.io/68c05729-0007-442b-9835-2aef68f34add/cmVhbC5naWY=" />
+
+**Deployment Steps:**
+
+1. Copy webhook URL from external application  
+    e.g. [https://domain.app/flows/trigger/](https://dus.up.railway.app/flows/trigger/9e73ccae-4fb1-46b6-858f-9c48891002a6)xxx
+    
+2. Login HRMS
+    
+3. Create new "App Connection"
+    
+    1. Type = "Webhook"
+        
+    2. URL = [https://domain.app/flows/trigger](https://domain.app/flows/trigger) (domain + path before dynamic value 'xxx')
+        
+4. Create new "Event Hook"
+    
+    1. Tick "Enable"
+        
+    2. Point to App Connection (created in step 3 above)
+        
+    3. Navigate to "Scope" tab
+        
+        1. Set Action to "Add"/"Modify"/"Delete" (determine which event to trigger synchronization to external app)
+            
+        2. Set "HMAC Secret" if applicable (for auth purpose)
+            
+        3. Scope (current support "EmployeeProfile" only)  
+            note: It covers all employee movements: Employee Master, Org Structure, Salary, Spare Fields etc
+            
+        4. Webhook (insert "xxx", copied from step 1 above)
+            
+5. Done
+    
+
+> **Remark:**  
+Webhook is currnetly benchmarking by developer team.  
+Target Release: 2026Q2

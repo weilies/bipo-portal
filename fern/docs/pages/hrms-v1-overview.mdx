@@ -1,0 +1,50 @@
+---
+title: Overview
+---
+
+Developers who are responsible for integrating BIPO HRMS with third-party applications (clients) can utilize the API (Application Programming Interface) offered by BIPO HRMS to extract data from Employee/Leave/Attendance/Payroll modules. This document serves as a guide for developers seeking assistance in developing the integration.
+
+Before you can use the API, you will need to make sure you have a few things in place:
+
+- Create a [Postman account](https://identity.getpostman.com/signup) if you haven't already done so. You will also need to install the Postman Client on your local machine.
+    
+- Import the Postman Collection by clicking "Run In Postman" button located at the top right corner.
+    
+- You will need access to a working BIPO Demo instance, such as DemoSEA.
+    
+- For BIPO Employee, you can download the Environment file from [BIPO Wiki](https://biposvc.sharepoint.com/sites/HRMSWIKI/SitePages/System-API.aspx) and import into Postman. Please see [here](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-data/#import-postman-data) on how to import Environment file.  
+    Reference API Portal Introduction [here.](https://biposvc.sharepoint.com/sites/Product2/_layouts/15/stream.aspx?id=%2Fsites%2FProduct2%2FShared%20Documents%2FIntegration%20Lobby%2FA%2DI%2FBIPO%20%28internal%29%2FIntegration%2FTraininig%20Videos%2FHRMS%20API%20Portal%20Introduction%20Workshop%2D20230831%5F150003%2DMeeting%20Recording%2Emp4&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ec5031c4e%2Dd3b4%2D4ea6%2D925d%2D408d2a0ec15f)
+    
+- If you're not from BIPO, you can reach out to BIPO employee that you are currently working with.
+    
+
+<img src="https://content.pstmn.io/f8210eca-902f-46e5-bf19-f090e73147bc/aW1hZ2UucG5n" width="778" height="550" />
+
+Note to BIPO PMs, please advise CN clients to use non-corporate network to access BIPO-Portal.
+
+We currently do not possess a formal benchmark for API consumption rates or capping. Nevertheless, as long as developers refrain from unduly abusing API requests, which is primarily not the case, it remains acceptable.
+
+Please note that basic knowledge of Postman is required in order to use the API. If you're new to Postman, you can learn the basics [here](https://learning.postman.com/docs/getting-started/sending-the-first-request/).
+
+**Notes:**
+
+- GetList and GetListItem are designed to pull table details. For simplicity sake, we will only document based on GetListItem
+    
+- API log captures relevant data related to API requests, responses, errors, and other events that occur during the API's operation. If you are from BIPO, you can check API log. Enable System Config first in order to record API log.
+    
+- At Upsert API, multiple objects are allowed to upsert in single API request. Each key fields must be identical for each object in the array.
+    
+
+<img src="https://content.pstmn.io/d6f87656-df30-4433-ae1e-93561ee4ca5b/YXBpIG9iamVjdC5qcGc=" width="578" height="403" />
+
+- Best practice is consolidate all updates into one object of one API request rather than putting them in different object.
+    
+- Before attempting to use any UPDATE method, PMs/developers are requested to engage with the product team first.
+    
+- Attachments cannot be extracted from GetList and GetListItem API.
+    
+- HTTPS is used for encryption of API which is the same for web and mobile access.
+    
+- To nulltify a Date/Datetime field, set it as NULL instead of "" (empty string)
+    
+- Reach out to api support team for any feedback ([api.support@biposervice.com](https://))

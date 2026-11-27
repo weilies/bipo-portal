@@ -1,0 +1,254 @@
+# yaml-language-server: $schema=https://schema.buildwithfern.dev/docs-yml.json
+
+instances:
+  - url: bipo.docs.buildwithfern.com
+title: BIPO | Documentation
+layout:
+  searchbar-placement: header
+  page-width: full
+navigation:
+  - api: BIPO-Portal
+    slug: bipo-portal
+    flattened: false
+    layout:
+      - HRMS V1:
+          summary: docs/pages/hrms-v1-overview.mdx
+          contents:
+            - hrmsV1.authorization:
+                summary: docs/pages/authorization-overview.mdx
+            - hrmsV1.hrmsV1Personnel:
+                title: Personnel
+                contents:
+                  - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelEmployee:
+                      title: Employee
+                      contents:
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelEmployee.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelEmployeePersonal:
+                            title: Personal
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelEmployee.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelEmployeeEmployment:
+                            title: Employment
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelEmployee.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelEmployeeAssignment:
+                            title: Assignment
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelEmployee.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelEmployeeStatutory:
+                            title: Statutory
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelEmployee.bank: {}
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelEmployee.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelEmployeeSalary:
+                            title: Salary
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelEmployee.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelEmployeeAttendance:
+                            title: Attendance
+                  - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelReference:
+                      title: Reference
+                      contents:
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelReference.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelReferenceOrganization:
+                            title: Organization
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelReference.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelReferenceAssignment:
+                            title: Assignment
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelReference.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelReferencePersonal:
+                            title: Personal
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelReference.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelReferenceStatutory:
+                            title: Statutory
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelReference.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelReferenceProject:
+                            title: Project
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelReference.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelReferenceSpareTables:
+                            title: Spare Tables
+                            summary: docs/pages/hrms-v1-hrms-v1-personnel-hrms-v1-hrms-v1-personnel-reference-spare-tables-overview.mdx
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelReference.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelReferenceOther:
+                            title: Other
+                  - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelPersonnel:
+                      title: Personnel
+                      contents:
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelPersonnel.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelPersonnelDetails:
+                            title: Details
+                        - hrmsV1.hrmsV1Personnel.hrmsV1HrmsV1PersonnelPersonnel.hrmsV1HrmsV1PersonnelHrmsV1HrmsV1PersonnelPersonnelUtility:
+                            title: Utility
+                  - hrmsV1.hrmsV1Personnel.organizationChart: {}
+            - hrmsV1.system:
+                contents:
+                  - hrmsV1.system.hrmsV1SystemView:
+                      title: View
+                      summary: docs/pages/hrms-v1-system-view-overview.mdx
+                  - hrmsV1.system.hrmsV1SystemFileManagement:
+                      title: File Management
+                      summary: docs/pages/hrms-v1-system-file-management-overview.mdx
+                  - hrmsV1.system.errorLog: {}
+                  - hrmsV1.system.hrmsV1SystemInterfaceMapping:
+                      title: Interface Mapping
+            - hrmsV1.hrmsV1LifeCycle:
+                title: Life Cycle
+            - hrmsV1.hrmsV1Payroll:
+                title: Payroll
+                contents:
+                  - hrmsV1.hrmsV1Payroll.hrmsV1HrmsV1PayrollReference:
+                      title: Reference
+                      contents:
+                        - hrmsV1.hrmsV1Payroll.hrmsV1HrmsV1PayrollReference.hrmsV1HrmsV1PayrollHrmsV1HrmsV1PayrollReferenceAllowance:
+                            title: Allowance
+                  - hrmsV1.hrmsV1Payroll.hrmsV1HrmsV1PayrollPayroll:
+                      title: Payroll
+                      contents:
+                        - hrmsV1.hrmsV1Payroll.hrmsV1HrmsV1PayrollPayroll.hrmsV1HrmsV1PayrollHrmsV1HrmsV1PayrollPayrollGenerateRecord:
+                            title: Generate Record
+            - hrmsV1.hrmsV1Leave:
+                title: Leave
+            - hrmsV1.hrmsV1Attendance:
+                title: Attendance
+                contents:
+                  - hrmsV1.hrmsV1Attendance.hrmsV1HrmsV1AttendanceAttendance:
+                      title: Attendance
+                      contents:
+                        - hrmsV1.hrmsV1Attendance.hrmsV1HrmsV1AttendanceAttendance.hrmsV1HrmsV1AttendanceHrmsV1HrmsV1AttendanceAttendanceClocking:
+                            title: Clocking
+                        - hrmsV1.hrmsV1Attendance.hrmsV1HrmsV1AttendanceAttendance.hrmsV1HrmsV1AttendanceHrmsV1HrmsV1AttendanceAttendanceRoster:
+                            title: Roster
+                        - hrmsV1.hrmsV1Attendance.hrmsV1HrmsV1AttendanceAttendance.hrmsV1HrmsV1AttendanceHrmsV1HrmsV1AttendanceAttendanceDaily:
+                            title: Daily
+                  - hrmsV1.hrmsV1Attendance.hrmsV1HrmsV1AttendanceReference:
+                      title: Reference
+                      contents:
+                        - hrmsV1.hrmsV1Attendance.hrmsV1HrmsV1AttendanceReference.hrmsV1HrmsV1AttendanceHrmsV1HrmsV1AttendanceReferenceAttendance:
+                            title: Attendance
+                        - hrmsV1.hrmsV1Attendance.hrmsV1HrmsV1AttendanceReference.hrmsV1HrmsV1AttendanceHrmsV1HrmsV1AttendanceReferenceClock:
+                            title: Clock
+            - hrmsV1.hrmsV1Claim:
+                title: Claim
+            - hrmsV1.references: {}
+      - HRMS V2:
+          summary: docs/pages/hrms-v2-overview.mdx
+          contents:
+            - hrmsV2.systemMiscIntegration:
+                contents:
+                  - hrmsV2.systemMiscIntegration.hrmsV2SystemMiscIntegrationView:
+                      title: View
+                  - hrmsV2.systemMiscIntegration.hrmsV2SystemMiscIntegrationFileManagement:
+                      title: File Management
+                      summary: docs/pages/hrms-v2-system-misc-integration-file-management-overview.mdx
+                  - hrmsV2.systemMiscIntegration.scheduledReport: {}
+                  - hrmsV2.systemMiscIntegration.security:
+                      summary: docs/pages/security-overview.mdx
+                      contents:
+                        - hrmsV2.systemMiscIntegration.security.userAccessProvision:
+                            summary: docs/pages/user-access-provision-overview.mdx
+                  - hrmsV2.systemMiscIntegration.hrmsV2SystemMiscIntegrationInterfaceMapping:
+                      title: Interface Mapping
+            - hrmsV2.hrmsV2Personnel:
+                title: Personnel
+                summary: docs/pages/hrms-v2-personnel-overview.mdx
+                contents:
+                  - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelEmployee:
+                      title: Employee
+                      contents:
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelEmployee.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelEmployeeEmployment:
+                            title: Employment
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelEmployee.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelEmployeePersonal:
+                            title: Personal
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelEmployee.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelEmployeeAssignment:
+                            title: Assignment
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelEmployee.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelEmployeeStatutory:
+                            title: Statutory
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelEmployee.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelEmployeeSalary:
+                            title: Salary
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelEmployee.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelEmployeeAttendance:
+                            title: Attendance
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelEmployee.attachment: {}
+                  - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelPersonnel:
+                      title: Personnel
+                      contents:
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelPersonnel.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelPersonnelUtility:
+                            title: Utility
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelPersonnel.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelPersonnelDetails:
+                            title: Details
+                  - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelReference:
+                      title: Reference
+                      contents:
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelReference.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelReferenceOrganization:
+                            title: Organization
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelReference.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelReferenceAssignment:
+                            title: Assignment
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelReference.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelReferencePersonal:
+                            title: Personal
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelReference.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelReferenceStatutory:
+                            title: Statutory
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelReference.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelReferenceProject:
+                            title: Project
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelReference.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelReferenceSpareTables:
+                            title: Spare Tables
+                        - hrmsV2.hrmsV2Personnel.hrmsV2HrmsV2PersonnelReference.hrmsV2HrmsV2PersonnelHrmsV2HrmsV2PersonnelReferenceOther:
+                            title: Other
+            - hrmsV2.authentication:
+                summary: docs/pages/authentication-overview.mdx
+            - hrmsV2.errorHandling:
+                summary: docs/pages/error-handling-overview.mdx
+            - hrmsV2.hrmsV2LifeCycle:
+                title: Life Cycle
+            - hrmsV2.hrmsV2Attendance:
+                title: Attendance
+                contents:
+                  - hrmsV2.hrmsV2Attendance.hrmsV2HrmsV2AttendanceAttendance:
+                      title: Attendance
+                      contents:
+                        - hrmsV2.hrmsV2Attendance.hrmsV2HrmsV2AttendanceAttendance.hrmsV2HrmsV2AttendanceHrmsV2HrmsV2AttendanceAttendanceClocking:
+                            title: Clocking
+                        - hrmsV2.hrmsV2Attendance.hrmsV2HrmsV2AttendanceAttendance.hrmsV2HrmsV2AttendanceHrmsV2HrmsV2AttendanceAttendanceRoster:
+                            title: Roster
+                        - hrmsV2.hrmsV2Attendance.hrmsV2HrmsV2AttendanceAttendance.hrmsV2HrmsV2AttendanceHrmsV2HrmsV2AttendanceAttendanceDaily:
+                            title: Daily
+                  - hrmsV2.hrmsV2Attendance.hrmsV2HrmsV2AttendanceReference:
+                      title: Reference
+                      contents:
+                        - hrmsV2.hrmsV2Attendance.hrmsV2HrmsV2AttendanceReference.hrmsV2HrmsV2AttendanceHrmsV2HrmsV2AttendanceReferenceAttendance:
+                            title: Attendance
+                        - hrmsV2.hrmsV2Attendance.hrmsV2HrmsV2AttendanceReference.hrmsV2HrmsV2AttendanceHrmsV2HrmsV2AttendanceReferenceClock:
+                            title: Clock
+                        - hrmsV2.hrmsV2Attendance.hrmsV2HrmsV2AttendanceReference.spareTimesheet: {}
+            - hrmsV2.hrmsV2Claim:
+                title: Claim
+            - hrmsV2.hrmsV2Leave:
+                title: Leave
+            - hrmsV2.hrmsV2Payroll:
+                title: Payroll
+                contents:
+                  - hrmsV2.hrmsV2Payroll.hrmsV2HrmsV2PayrollPayroll:
+                      title: Payroll
+                      contents:
+                        - hrmsV2.hrmsV2Payroll.hrmsV2HrmsV2PayrollPayroll.hrmsV2HrmsV2PayrollHrmsV2HrmsV2PayrollPayrollGenerateRecord:
+                            title: Generate Record
+                  - hrmsV2.hrmsV2Payroll.hrmsV2HrmsV2PayrollReference:
+                      title: Reference
+                      contents:
+                        - hrmsV2.hrmsV2Payroll.hrmsV2HrmsV2PayrollReference.hrmsV2HrmsV2PayrollHrmsV2HrmsV2PayrollReferenceAllowance:
+                            title: Allowance
+                        - hrmsV2.hrmsV2Payroll.hrmsV2HrmsV2PayrollReference.costAllocation: {}
+      - Applications:
+          summary: docs/pages/applications-overview.mdx
+      - Lark/FeiShu (2026Q3):
+          summary: docs/pages/lark-feishu-2026q3-overview.mdx
+      - Webhook (2026Q2):
+          summary: docs/pages/webhook-2026q2-overview.mdx
+      - Workday (2026Q1):
+          summary: docs/pages/workday-2026q1-overview.mdx
+    summary: docs/pages/collection-overview.mdx
+colors:
+  accent-primary:
+    light: "#1A73E8"
+    dark: "#1A73E8"
+  background:
+    light: "#F8FBFE"
+    dark: "#01060C"
+  border:
+    light: "#CAD0D8"
+    dark: "#272D35"
+theme:
+  page-actions: toolbar
+  footer-nav: minimal
+logo:
+  dark: docs/assets/logo-dark.png
+  light: docs/assets/logo-light.png
+  height: 20
+favicon: docs/assets/favicon.svg
+css:
+  - styles.css
+  - docs/assets/onboarding-theme.css
+typography:
+  headingsFont:
+    name: Inter
+  bodyFont:
+    name: Inter

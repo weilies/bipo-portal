@@ -1,0 +1,19 @@
+---
+title: Overview
+---
+
+Sample error responses returned by the API and how to read them.
+
+Most errors return a JSON body in this shape:
+
+| **Field** | **Description** |
+| --- | --- |
+| data | Always `null` when an error occurs. |
+| errorCode | Reference code, when one applies. |
+| errors | List of messages that explain what to correct. |
+| messages | Additional information. |
+
+| **HTTP Status** | **Meaning** |
+| --- | --- |
+| 400 | The request could not be processed. Correct the request using the message in `errors`. |
+| 401 | Not authenticated, or not authorized for the endpoint. Get a new token or ask your administrator for access. |

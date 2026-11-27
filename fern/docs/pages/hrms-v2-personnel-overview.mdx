@@ -1,0 +1,197 @@
+---
+title: Overview
+---
+
+Response Structure of Import and Delete API:
+
+The API returns a structured response indicating the processing result of each record submitted in the request payload. Records are categorized into **validRecords** and **invalidRecords** based on validation and processing outcomes.
+
+<Tabs>
+<Tab title="JavaScript" id="cb-0-javascript">
+
+```javascript
+{
+  "data": {
+    "key": "<string>",
+    "validRecords": [
+      {
+        "key": "<string>",
+        "message": "<string>"
+      }
+    ],
+    "invalidRecords": [
+      {
+        "key": "<string>",
+        "errorMessage": "<string>"
+      }
+    ]
+  },
+  "errorCode": "<string|null>",
+  "errors": [
+    "<string>"
+  ],
+  "messages": [
+    "<string>"
+  ]
+}
+
+```
+
+</Tab>
+<Tab title="Python" id="cb-0-python">
+
+```python
+{
+  "data": {
+    "key": "<string>",
+    "validRecords": [
+      {
+        "key": "<string>",
+        "message": "<string>"
+      }
+    ],
+    "invalidRecords": [
+      {
+        "key": "<string>",
+        "errorMessage": "<string>"
+      }
+    ]
+  },
+  "errorCode": "<string|null>",
+  "errors": [
+    "<string>"
+  ],
+  "messages": [
+    "<string>"
+  ]
+}
+
+```
+
+</Tab>
+<Tab title="Java" id="cb-0-java">
+
+```java
+{
+  "data": {
+    "key": "<string>",
+    "validRecords": [
+      {
+        "key": "<string>",
+        "message": "<string>"
+      }
+    ],
+    "invalidRecords": [
+      {
+        "key": "<string>",
+        "errorMessage": "<string>"
+      }
+    ]
+  },
+  "errorCode": "<string|null>",
+  "errors": [
+    "<string>"
+  ],
+  "messages": [
+    "<string>"
+  ]
+}
+
+```
+
+</Tab>
+<Tab title="cURL" id="cb-0-curl">
+
+```curl
+{
+  "data": {
+    "key": "<string>",
+    "validRecords": [
+      {
+        "key": "<string>",
+        "message": "<string>"
+      }
+    ],
+    "invalidRecords": [
+      {
+        "key": "<string>",
+        "errorMessage": "<string>"
+      }
+    ]
+  },
+  "errorCode": "<string|null>",
+  "errors": [
+    "<string>"
+  ],
+  "messages": [
+    "<string>"
+  ]
+}
+
+```
+
+</Tab>
+<Tab title="Shell" id="cb-0-bash">
+
+```bash
+{
+  "data": {
+    "key": "<string>",
+    "validRecords": [
+      {
+        "key": "<string>",
+        "message": "<string>"
+      }
+    ],
+    "invalidRecords": [
+      {
+        "key": "<string>",
+        "errorMessage": "<string>"
+      }
+    ]
+  },
+  "errorCode": "<string|null>",
+  "errors": [
+    "<string>"
+  ],
+  "messages": [
+    "<string>"
+  ]
+}
+
+```
+
+</Tab>
+</Tabs>
+### **Field Descriptions:**
+
+`data` (object)
+
+Contains the processing results grouped by record status.
+
+| **Field** | **Type** | **Description** |
+| --- | --- | --- |
+| key | string | Defines the composite key fields used to uniquely identify each record in the request data. Example: "EmployeeCode;DateStart" |
+| validRecords | array | List of records that were successfully validated and processed. |
+| validRecords.key | string | **Composite key value derived from the request.  <br />Example: "000002;2025-01-01;BIPO" |
+| validRecords.message | string | Result message  <br />Example: "Added", "Updated", "Deleted" |
+| invalidRecords | array | List of records that failed validation or processing. |
+| invalidRecords.key | string | **Composite key value derived from the request.  <br />Example: "000002;;BIPO" |
+| invalidRecords.message | string | Description of the validation or processing error.  <br />Example: "Mandatory Date Start must not be empty." |
+| errorCode | string | System-level error code |
+| errors | array | Summary messages describing the overall import result.  <br />Example: "1 record(s) imported. 1 failed record(s)". |
+| messages | array | Successful message  <br />Example: "10 record(s) imported." |
+
+**Key Mapping Rule:
+
+> **The key value in both** **`validRecords`** **and** **`invalidRecords`** **is derived from the fields specified in** **`data.key`**, using the corresponding values from each record in the request **`data`**. 
+  
+
+- Fields are concatenated using a semicolon (`;`)
+    
+- If a key field value is missing, it will be represented as empty
+    
+
+| **Request** | **Key return in Response** |
+| --- | --- |
+| "EmployeeCode": "000002",  <br />"DateStart": "2025-01-01T00:00:00",  <br />"CompanyCode": "BIPO" | "000002;2025-01-01;BIPO" |

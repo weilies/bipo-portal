@@ -1,0 +1,32 @@
+---
+title: Overview
+---
+
+The **GetView** API is a feature that allows users to extract data from the database through pre-configured **SQL Views**, without directly accessing the database. This provides both flexibility and control for data extraction, particularly useful in integration scenarios.
+
+Why we should use GetView?
+
+**Secure Data Access**: GetView only expose necessary data through controlled SQL views, reducing security risks.
+
+**Flexible Integration**: User can query filtered data via API without custom development. GetView accept parameters like EmployeeCode, CompanyCode, ect to filter data dynamically.
+
+**User Friendly**: End users don't need to know the internal schema of the database - they interact with friendly "View Names".
+
+If you don't have access to create SQL Views, contact your Project Manager to setup SQL views.
+
+If you have access to create SQL Views, go to System > Utility > SQL View Screen and create SQL View.
+
+<img src="https://content.pstmn.io/1e1a2a42-6543-430a-ae00-d8299b4475f6/aW1hZ2UucG5n" width="870" height="390" />
+
+Please make sure to use optimized SQL Command.
+
+- Ensure it's filtered appropriately with WHERE clauses
+    
+- Use parameter placeholders (e.g., @CompanyCode) and blank field handling
+    
+- Avoid overly complex joins or non-performant
+    
+
+<img src="https://content.pstmn.io/60d3214b-c749-4c32-a95c-2a33c9dc2993/aW1hZ2UucG5n" width="1042" height="601" />
+
+Lastly, user can call the API with proper JSON body.

@@ -1,0 +1,11 @@
+---
+title: Overview
+---
+
+BIPO HRMS supports file management via API. Files are attached to an existing record (e.g. a leave or claim request) using that record's ID, which is returned by the record's own Export API.
+
+Each file has its own `RecordID`. Use File List to get it, then download or delete the file.
+
+Note: Each API must be enabled for the Web API user under Controller "BIPOAttachmentController" (methods GetFiles, GetFile, UploadFile, DeleteFile).
+
+Note: Errors return HTTP 200 with `"ok": false` and a message, e.g. `{"ok": false, "msg": "File not found."}`.
